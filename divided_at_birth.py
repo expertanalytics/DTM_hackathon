@@ -72,7 +72,11 @@ class DividedAtBirth:
         locations = face_recognition.face_locations(im)
         return im, locations
 
-    def get_distance(self, fname, resize_x_direction=0.1, resize_y_direction=0.1, resize_image=True):
+    def get_distance(self,
+                     fname: Union[Path, str],
+                     resize_x_direction: float = 0.1,
+                     resize_y_direction: float = 0.1,
+                     resize_image: bool = True):
         """
         Find the person the face is most similar to
 
